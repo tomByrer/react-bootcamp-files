@@ -35,7 +35,7 @@ Now we have a basic form to add & remove a list of items.
 
 ### Day 4
 
- * Suggested reading: [React Router 4 intro](https://tylermcginnis.com/react-router-philosophy-introduction/) (note, v4 is heavly changed from prior versions, so ensure you search 'React Router 4')
+ * Suggested reading: [React Router 4 intro](https://tylermcginnis.com/react-router-philosophy-introduction/) (Skip to `"React Router v4 aligns nicely with React"`; the previous content is background.  v4 is heavly changed from prior versions)
 
 
 ## Interesting quotes & mentions
@@ -43,7 +43,9 @@ Now we have a basic form to add & remove a list of items.
   * 'state is just data'
   * 'React handles everything else'
   * [JavaScript Destructuring](https://youtu.be/-vR3a11Wzt0) (& likely will use [Object and Array Destructuring](blob:https://www.youtube.com/3d3b6f14-83d7-4d4c-a1cd-2a182f146a3d))
-   * 'use a `class` if you need `state`, `function` if not.
-   * how [`this`](https://youtu.be/NHfRLQuHjsU?t=2100) & [`bind`](https://youtu.be/NHfRLQuHjsU?t=3010) applies to React
-   * [`.concat` creates new arrays](https://youtu.be/NHfRLQuHjsU?t=4523) which is more desirable than `.push` which changes (mutates) the existing array.
-
+  * 'use a `class` if you need `state`, `function` if not.
+  * how [`this`](https://youtu.be/NHfRLQuHjsU?t=2100) & [`bind`](https://youtu.be/NHfRLQuHjsU?t=3010) applies to React
+  * [`.concat` creates new arrays](https://youtu.be/NHfRLQuHjsU?t=4523) which is more desirable than `.push` which changes (mutates) the existing array.
+  * make small changes & test frequemtly
+  * don't need to `bind` lifecycle methods
+  * [`componentDidUpdate` example](https://youtu.be/Xa3DGGP4mLM?t=4100)

@@ -1,4 +1,4 @@
-<!-- https://youtu.be/Xa3DGGP4mLM?t=1618 -->
+<!-- https://youtu.be/Xa3DGGP4mLM?t=2491 -->
 <html>
 <head>
   <title>First React App</title>
@@ -8,6 +8,30 @@
 
 <body>
 <div id='app'></div>
+
+<script>
+  window.API = {
+    fetchFriends() {
+      return new Promise((res, rej) => {
+        const friends = [
+          {
+            name: 'Jordyn',
+            active: true,
+          },
+          {
+            name: 'Mikenzi',
+            active: true,
+          },
+          {
+            name: 'Jake',
+            active: false
+          }
+        ]
+        setTimeout(() => res(friends), 2000)
+      })
+    }
+  }
+</script>
 
 <script type='text/babel'>
   function ActiveFriends (props) {
@@ -47,20 +71,8 @@
     constructor(props) {
       super(props)
       this.state = {
-        friends: [
-          {
-            name: 'Jordyn',
-            active: true,
-          },
-          {
-            name: 'Mikenzi',
-            active: true,
-          },
-          {
-            name: 'Jake',
-            active: false
-          }
-        ],
+        friends: [],
+        hasLoaded: false,
         input: '',
       }
       this.handleRemoveFriend = this.handleRemoveFriend.bind(this)
@@ -69,15 +81,26 @@
       this.handleToggleFriend = this.handleToggleFriend.bind(this)
       console.log('--constructor--')
     }
+
     componentDidMount() {
-      console.log('--componentDidMount-- (add listeners, fetch data, etc)')
+      console.log('--componentDidMount--')
+      API.fetchFriends()
+        .then((friends) => {
+          this.setState({
+            friends,
+            hasLoaded: true,
+          })
+      })
     }
+
     componentDidUpdate() {
       console.log('--componentDidUpdate--')
     }
+
     componentWillUnmount() {
-      console.log('--componentWillUnmount-- (remove listeners')
+      console.log('--componentWillUnmount--')
     }
+
     handleAddFriend() {
       this.setState((currentState) => {
         return {
@@ -120,6 +143,9 @@
 
     render() {
       console.log('--render--')
+      if (this.state.hasLoaded === false) {
+        return <h1>LOADING</h1>
+      }
       return (
         <div>
           <input
@@ -149,7 +175,7 @@
       )
     }
   }
-  
+
   ReactDOM.render(
     <App />,
     document.getElementById('app')
