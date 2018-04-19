@@ -36,6 +36,9 @@ Now we have a basic form to add & remove a list of items.
 ### Day 4
 
  * Suggested reading: [React Router 4 intro](https://tylermcginnis.com/react-router-philosophy-introduction/) (Skip to `"React Router v4 aligns nicely with React"`; the previous content is background.  v4 is heavly changed from prior versions)
+ * [Yesterday's solution walkthough](https://youtu.be/alZur1g2Cnw?t=139)
+ * [YouTube](https://youtu.be/alZur1g2Cnw?t=1950) lesson start; installing `create-react-app`, then teaches [`react-router-dom`](https://youtu.be/alZur1g2Cnw?t=3136)
+ * In-browser [routing demo](https://codepen.io/kccrs/pen/bgLYQb/?editors=0010) which looks similar to [Tyler's code](https://gist.github.com/tylermcginnis/f44f260fbb7a691774868ddd4661fa8a) (no other code for this day)
 
 
 ## Interesting quotes & mentions
@@ -49,3 +52,4 @@ Now we have a basic form to add & remove a list of items.
   * make small changes & test frequemtly
   * don't need to `bind` lifecycle methods
   * [`componentDidUpdate` example](https://youtu.be/Xa3DGGP4mLM?t=4100)
+  * [ES2015 Destructuring](https://tylermcginnis.com/videos/object-array-destructuring/) & [parameter handleing](http://exploringjs.com/es6/ch_parameter-handling.html#sec_overview-parameter-handling)
